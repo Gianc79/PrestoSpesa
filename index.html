@@ -19,7 +19,43 @@
         
         /* Blocco centrale */
         .main-block { width: 100%; max-width: 340px; display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 80px; }
-
+        
+        /* Titolo dell'applicazione */
+        .app-title {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 30px);
+            max-width: 340px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #292929, #181818);
+            border: 2px solid #ffcc00;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+            z-index: 1;
+        }
+        
+        .app-title-name {
+            color: #ffcc00;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+        
+        .app-title-version {
+            color: #4cd964;
+            font-size: 0.8rem;
+            font-weight: bold;
+            background: #303030;
+            padding: 4px 7px;
+            border-radius: 6px;
+        }
+        
         /* Riga unica Prezzo + Quantità + Frecce, in proporzione 3:1:1 */
         .price-qty-row { width: 100%; display: grid; grid-template-columns: 3fr 1fr 1fr; gap: 6px; height: 60px; }
 
@@ -83,6 +119,12 @@
         <!-- Toast -->
         <div class="toast" id="toast">Prezzo aggiunto</div>
 
+        <!-- Logo e versione dell'app -->
+        <div class="app-title">
+            <span class="app-title-name">PrestoSpesa</span>
+            <span class="app-title-version">v. 1.1</span>
+        </div>
+        
         <!-- Blocco centrale -->
         <div class="main-block">
             <!-- Riga unica Prezzo + Quantità + Frecce -->
